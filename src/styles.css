@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-divider.mat-divider-horizontal {
+  border-top-color: gainsboro;
+}
+
+mat-card-title {
+  color: goldenrod;
+  align-self: center;
+  padding: 8px;
+  margin: 13px 0;
+}
+
+mat-card-content {
+  margin: 13px 0;
+}
+
+.card-sized {
+  width: 100%;
+  max-width: 960px;
+  min-height: 88vh;
+  aspect-ratio: 16/9;
+}
+
+mat-dialog-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+mat-dialog-container form mat-form-field {
+  padding: .1rem;
+}
+
+.mat-dialog-title {
+  color: goldenrod;
+  align-self: center;
+  padding: 2px;
+  margin: 3px 0;
+}
+
+form {
+  margin-top: 18px;
+}
+
+.cdk-drag-preview {
+  position: fixed !important;
+  z-index: 10000 !important;
+  pointer-events: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}

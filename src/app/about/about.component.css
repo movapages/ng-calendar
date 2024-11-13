@@ -1,0 +1,29 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 960px;
+  padding: 2rem;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.about-card {
+  margin: 20px;
+  padding: 16px;
+  background-color: #fafafa;
+}
+
+.spa-details {
+  margin-top: 16px;
+}
+
+.spa-details h6 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.spa-details ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}

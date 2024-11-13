@@ -1,0 +1,42 @@
+<span class="mat-dialog-title" mat-dialog-title style="text-align: center; font-size: 1.48rem;">Add Event</span>
+
+<form [formGroup]="eventForm" (ngSubmit)="onSave()"
+      style="margin: 0 12px; display: flex; flex-direction: column; align-items: center;">
+
+  <mat-form-field appearance="fill" style="width: 92%; font-size: 14px; font-weight: bolder">
+    <input matInput formControlName="title" placeholder="Add title"/>
+  </mat-form-field>
+
+  <div style="display: flex; align-items: center; width: 92%;">
+
+    <!-- Date Picker for selecting the day -->
+    <mat-form-field appearance="fill" style="width: 30%;">
+      <input matInput [matDatepicker]="datePicker" formControlName="date" placeholder="Pick a date"/>
+      <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+      <mat-datepicker #datePicker></mat-datepicker>
+    </mat-form-field>
+
+    <!-- Start Time Picker -->
+    <mat-form-field appearance="fill" style="flex: 1; margin-left: 16px;">
+      <input matInput [ngxMatTimepicker]="startTimePicker" formControlName="startTime" placeholder="Start time"/>
+      <ngx-mat-timepicker-toggle matSuffix [for]="startTimePicker"></ngx-mat-timepicker-toggle>
+      <ngx-mat-timepicker #startTimePicker></ngx-mat-timepicker>
+    </mat-form-field>
+
+    <!-- End Time Picker -->
+    <mat-form-field appearance="fill" style="flex: 1;">
+      <input matInput [ngxMatTimepicker]="endTimePicker" formControlName="endTime" placeholder="End time"/>
+      <ngx-mat-timepicker-toggle matSuffix [for]="endTimePicker"></ngx-mat-timepicker-toggle>
+      <ngx-mat-timepicker #endTimePicker></ngx-mat-timepicker>
+    </mat-form-field>
+  </div>
+
+  <mat-form-field appearance="fill" style="width: 92%; margin-top: 16px; font-size: 14px;">
+    <textarea matInput formControlName="eventName" placeholder="Add description or attachments"></textarea>
+  </mat-form-field>
+
+  <div style="display: flex; justify-content: space-evenly;  ; margin: 8px; width: 48%; padding: 8px;">
+    <button mat-raised-button color="warn" type="button" (click)="onCancel()">Cancel</button>
+    <button mat-flat-button color="primary" type="submit">Save</button>
+  </div>
+</form>

@@ -1,0 +1,57 @@
+.event-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.event-row {
+  position: relative;
+  padding-left: 60px;
+  height: 64px;
+  background-color: transparent;
+  border-bottom: 1px dotted #ccc;
+}
+
+.event-row::before {
+  content: attr(data-hour-label);
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  color: #888;
+  font-size: 14px;
+}
+
+.event-box {
+  position: relative;
+  background-color: navy;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  z-index: 1;
+}
+
+.cdk-drag-preview {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.cdk-drag-placeholder {
+  visibility: hidden;
+}
+
+.delete-button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: transparent;
+  border: none;
+  color: antiquewhite;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+

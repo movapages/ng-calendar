@@ -1,0 +1,18 @@
+<div cdkDropListGroup>
+  <div
+    *ngFor="let slot of dataSource; trackBy: trackByFn"
+    class="event-row"
+    [attr.data-hour-label]="slot.hour"
+    cdkDropList
+    #listId="cdkDropList"
+    [cdkDropListData]="[slot]"
+    [cdkDropListConnectedTo]="connectedDropLists"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <div *ngIf="slot.event !== ' - '" cdkDrag class="event-box">
+      <strong>{{ slot.event }}</strong><br/>
+      <span>{{ slot.startTime }} - {{ slot.endTime }}</span>
+      <button class="delete-button" (click)="deleteEvent(slot.id)">X</button>
+    </div>
+  </div>
+</div>

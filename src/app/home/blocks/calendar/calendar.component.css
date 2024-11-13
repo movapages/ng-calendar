@@ -1,0 +1,23 @@
+.inline-calendar {
+  width: 380px;
+}
+
+.calendar-sections {
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.calendar-button {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-picker, .calendar-button {
+  flex: 1;
+}

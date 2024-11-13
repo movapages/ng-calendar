@@ -1,0 +1,18 @@
+<div class="calendar-sections">
+
+  <div class="calendar-picker">
+
+    <span class="mat-title-medium">{{ today | date }}</span>
+
+    <mat-calendar (selectedChange)="onDateSelected($event)" [(selected)]="today"></mat-calendar>
+
+  </div>
+
+  <div class="calendar-button">
+    <button mat-button mat-raised-button mat-stroked-button (click)="openAddEventDialog()">
+      <mat-icon aria-hidden="false" aria-label="calendar icon" fontIcon="add"></mat-icon>
+      Add Event
+    </button>
+  </div>
+
+</div>
