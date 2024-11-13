@@ -10,4 +10,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 The SPA is a test drive to use Angular 18 along with Material library, and
 namely its ___Drag and Drop___ feature, lazy-loading,
-and some other minor features.
+and some others.
